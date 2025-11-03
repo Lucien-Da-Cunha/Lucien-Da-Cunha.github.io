@@ -446,6 +446,37 @@ nav {
     .logo-text {
         font-size: 0.9rem !important; /* 1.5 * 0.6 */
     }
+    
+    /* Réduction des boutons sociaux de 30% */
+    .social-link {
+        padding: 0.28rem 0.56rem !important; /* 0.4 * 0.7, 0.8 * 0.7 */
+        font-size: 0.56rem !important; /* 0.8 * 0.7 */
+        gap: 0.21rem !important; /* 0.3 * 0.7 */
+    }
+    
+    .social-link svg {
+        width: 9.8px !important; /* 14 * 0.7 */
+        height: 9.8px !important; /* 14 * 0.7 */
+    }
+    
+    .terminal-label {
+        font-size: 0.665rem !important; /* 0.95 * 0.7 */
+    }
+    
+    .social-links {
+        gap: 0.588rem !important; /* 0.84 * 0.7 */
+    }
+    
+    /* Réduction du sélecteur de langue de 30% */
+    .lang-btn {
+        padding: 0.28rem 0.49rem !important; /* 0.4 * 0.7, 0.7 * 0.7 */
+        font-size: 0.595rem !important; /* 0.85 * 0.7 */
+        gap: 0.175rem !important; /* 0.25 * 0.7 */
+    }
+    
+    .lang-prefix {
+        font-size: 0.525rem !important; /* 0.75 * 0.7 */
+    }
 }
 
 .nav-links {
