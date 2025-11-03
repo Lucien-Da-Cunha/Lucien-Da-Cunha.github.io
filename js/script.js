@@ -216,3 +216,26 @@ document.querySelectorAll('.section').forEach(section => {
 });
 
 console.log('Portfolio de Lucien Da Cunha - Chargé avec succès! 🚀');
+
+// ===== Animation des barres de compétences =====
+const animateSkillBars = () => {
+    const skillBars = document.querySelectorAll('.skill-bar');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const percentage = bar.getAttribute('data-percentage');
+                setTimeout(() => {
+                    bar.style.width = percentage + '%';
+                }, 100);
+                observer.unobserve(bar);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    skillBars.forEach(bar => observer.observe(bar));
+};
+
+// Lancer l'animation au chargement
+document.addEventListener('DOMContentLoaded', animateSkillBars);

@@ -1,5 +1,17 @@
-# Portfolio de ## 🗂️ Structure du projet
+# Portfolio de ## 🗂️ Structure du proj## Historique des modifications
 
+### 3 novembre 2025 (Suite 2)
+- **Section Compétences avec barres lumineuses** :
+  - Niveau École 42 : Level 4.53 (53%)
+  - Langages : C (60%), C++ (10%), HTML (30%), CSS (25%), JS (10%), PHP (30%)
+  - Barres de progression avec dégradés violets (#9b59b6 → #8e44ad → #6a1b9a)
+  - Effet de lumière animé qui traverse les barres (shimmer)
+  - Glow violet intensifié au hover
+  - Animation au scroll (IntersectionObserver)
+  - Design épuré sans emojis
+  - Responsive pour mobile
+
+### 3 novembre 2025
 ```
 lucien_da_cunha/
 ├── index.html          # Page principale du portfolio
