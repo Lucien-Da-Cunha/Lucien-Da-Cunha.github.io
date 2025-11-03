@@ -303,36 +303,6 @@ nav {
     flex-wrap: wrap;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--terminal-green);
-    transition: all 0.3s ease;
-    font-weight: 500;
-    font-size: 1.12rem;
-    padding: 0.7rem 1.12rem;
-    border-radius: 4px;
-    background: transparent;
-    letter-spacing: 0;
-    text-shadow: 0 0 5px var(--terminal-green);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1px solid transparent;
-    font-family: 'Courier New', monospace;
-    white-space: nowrap;
-}
-
-.nav-prefix {
-    color: var(--terminal-green-light);
-    font-weight: 700;
-    font-size: 1.4rem;
-}
-
-.nav-text {
-    color: var(--terminal-green);
-    font-size: 1.12rem;
-}
-
 /* ===== Hamburger Menu ===== */
 .hamburger {
     display: none;
@@ -473,15 +443,15 @@ nav {
     color: var(--terminal-green);
     transition: all 0.3s ease;
     font-weight: 500;
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
     border-radius: 4px;
     background: transparent;
     letter-spacing: 0;
     text-shadow: 0 0 5px var(--terminal-green);
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.4rem;
     border: 1px solid transparent;
     font-family: 'Courier New', monospace;
     white-space: nowrap;
@@ -493,12 +463,12 @@ nav {
 .nav-prefix {
     color: var(--terminal-green-light);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .nav-text {
     color: var(--terminal-green);
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
@@ -2639,7 +2609,6 @@ footer {
     .submit-btn {
         font-size: 0.9rem;
         padding: 0.8rem 1.5rem;
-    }
     }
 
     .container {
