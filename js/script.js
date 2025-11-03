@@ -239,3 +239,105 @@ const animateSkillBars = () => {
 
 // Lancer l'animation au chargement
 document.addEventListener('DOMContentLoaded', animateSkillBars);
+
+// ===== Filtres de projets =====
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+const seeMoreBtn = document.getElementById('seeMoreBtn');
+let showingAll = false;
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filterValue = button.getAttribute('data-filter');
+        
+        // Retirer la classe active de tous les boutons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Ajouter la classe active au bouton cliqué
+        button.classList.add('active');
+        
+        // Réinitialiser l'état "voir plus"
+        showingAll = false;
+        if (seeMoreBtn) {
+            seeMoreBtn.setAttribute('data-fr', 'Voir plus');
+            seeMoreBtn.setAttribute('data-en', 'See more');
+            seeMoreBtn.textContent = document.documentElement.lang === 'en' ? 'See more' : 'Voir plus';
+        }
+        
+        // Filtrer les projets
+        let visibleCount = 0;
+        projectCards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            
+            if (filterValue === 'all' || cardCategory === filterValue) {
+                visibleCount++;
+                if (visibleCount <= 6) {
+                    card.style.display = 'block';
+                    card.classList.remove('project-hidden');
+                } else {
+                    card.style.display = 'none';
+                    card.classList.add('project-hidden');
+                }
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Afficher/cacher le bouton "Voir plus"
+        if (seeMoreBtn) {
+            const hiddenProjects = Array.from(projectCards).filter(card => {
+                const cardCategory = card.getAttribute('data-category');
+                return (filterValue === 'all' || cardCategory === filterValue) && card.classList.contains('project-hidden');
+            });
+            
+            if (hiddenProjects.length > 0) {
+                seeMoreBtn.classList.remove('hidden');
+            } else {
+                seeMoreBtn.classList.add('hidden');
+            }
+        }
+    });
+});
+
+// Bouton "Voir plus"
+if (seeMoreBtn) {
+    seeMoreBtn.addEventListener('click', () => {
+        const activeFilter = document.querySelector('.filter-btn.active');
+        const filterValue = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
+        
+        if (!showingAll) {
+            // Afficher tous les projets
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    card.style.display = 'block';
+                    card.classList.remove('project-hidden');
+                }
+            });
+            showingAll = true;
+            seeMoreBtn.setAttribute('data-fr', 'Voir moins');
+            seeMoreBtn.setAttribute('data-en', 'See less');
+            seeMoreBtn.textContent = document.documentElement.lang === 'en' ? 'See less' : 'Voir moins';
+        } else {
+            // Cacher les projets au-delà du 6ème
+            let visibleCount = 0;
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (filterValue === 'all' || cardCategory === filterValue) {
+                    visibleCount++;
+                    if (visibleCount > 6) {
+                        card.style.display = 'none';
+                        card.classList.add('project-hidden');
+                    }
+                }
+            });
+            showingAll = false;
+            seeMoreBtn.setAttribute('data-fr', 'Voir plus');
+            seeMoreBtn.setAttribute('data-en', 'See more');
+            seeMoreBtn.textContent = document.documentElement.lang === 'en' ? 'See more' : 'Voir plus';
+            
+            // Scroll vers les projets
+            document.getElementById('projets').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    });
+}

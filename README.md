@@ -5,11 +5,87 @@
   - Niveau École 42 : Level 4.53 (53%)
   - Langages : C (60%), C++ (10%), HTML (30%), CSS (25%), JS (10%), PHP (30%)
   - Barres de progression avec dégradés violets (#9b59b6 → #8e44ad → #6a1b9a)
-  - Effet de lumière animé qui traverse les barres (shimmer)
   - Glow violet intensifié au hover
   - Animation au scroll (IntersectionObserver)
   - Design épuré sans emojis
   - Responsive pour mobile
+- **Menu de filtrage pour les projets** :
+  - 5 catégories : Tous, Personnel, Scolaire, École 42, Professionnel
+  - Boutons collés dans conteneur arrondi (border-radius: 50px)
+  - Effet de glissement fluide avec rebond
+  - Cartes glissent depuis la droite avec décalage en cascade (100ms)
+  - Animation cubic-bezier avec effet élastique
+  - Hover avec scale sur les boutons
+- **Premier projet ajouté** :
+  - Système télémétrique (catégorie Personnel)
+  - Image carrée (aspect-ratio 1:1) avec zoom au hover
+  - Tags : C++, Arduino
+  - Design glassmorphism cohérent
+  - Support traduction FR/EN
+  - Structure dans assets/projects/
+- **Deuxième projet ajouté** :
+  - InMoov - Robot humanoïde (catégorie Personnel)
+  - Tags : Électronique, Impression 3D
+  - Image carrée avec effet zoom au hover
+  - Description bilingue FR/EN
+- **Troisième projet ajouté** :
+  - Portfolio - Ce site web (catégorie Personnel)
+  - Tags : HTML, CSS, JavaScript, AI, API
+  - Design glassmorphism avec animations
+  - Description du site actuel
+- **Quatrième projet ajouté** :
+  - Figurine (catégorie Personnel)
+  - Tags : Impression 3D, Résine, Peinture
+  - Création de figurines personnalisées
+  - Processus complet de fabrication artisanale
+- **Cinquième projet ajouté** :
+  - Serveur Web Raspberry Pi 5 (catégorie Personnel)
+  - Tags : Raspberry Pi 5, Linux, Serveur Web
+  - Configuration et déploiement serveur complet
+  - Hébergement de services et applications
+- **Sixième projet ajouté** :
+  - AirSamu - Drone Défibrillateur (catégorie Scolaire - STI2D)
+  - Tags : Arduino, Drone, Site Web, STI2D
+  - Drone autonome avec navigation automatique
+  - Interface web avec admin
+  - Olympiades de SI Paris 2021
+- **Septième projet ajouté** :
+  - Station Météo Connectée (catégorie Scolaire)
+  - Tags : ESP32, TCP, Node.js, Docker
+  - Collecte données météo temps réel
+  - Backend Node.js avec transmission TCP
+  - Interface web avec historique
+  - Déploiement Docker
+- **Projets École 42 ajoutés (8-16)** :
+  - Libft : Bibliothèque C standard (C, Makefile)
+  - ft_printf : Reproduction de printf (C, Makefile)
+  - Born2beRoot : Configuration VM sécurisée (Linux, VM, Sécurité)
+  - Get Next Line : Lecture ligne par ligne (C, Makefile)
+  - Push Swap : Algorithme de tri avec 2 piles (C, Makefile, Algorithmes)
+  - So Long : Jeu 2D (C, Makefile, Jeu 2D)
+  - Pipex : Gestion des pipes (C, Makefile, Processus)
+  - Minishell : Shell minimaliste (C, Makefile, Shell)
+  - Philosophers : Problème des philosophes (C, Makefile, Threads)
+  - Total : 16 projets (5 personnels + 2 scolaires + 9 École 42)
+- **Projets Professionnels ajoutés (17-18)** :
+  - Vente de Lampes 3D (catégorie Professionnel)
+    * Création et commercialisation de lampes 3D
+    * Tags : Impression 3D, Commerce, Design
+  - ZonArt (catégorie Professionnel)
+    * Coalition de 5 créateurs multi-domaines
+    * Prestations professionnelles variées
+    * Tags : Prestations, Collectif, Multi-domaines
+  - **Total final : 18 projets** (5 personnels + 2 scolaires + 9 École 42 + 2 professionnels)
+- **Menu de filtrage pour les projets** :
+  - 5 catégories : Tous, Personnel, Scolaire, École 42, Professionnel
+  - Boutons collés ensemble dans un conteneur arrondi
+  - Container avec glassmorphism (border-radius: 50px)
+  - Fond transparent avec blur sur le conteneur
+  - Bouton actif avec fond noir et ombre
+  - Transitions fluides entre les états
+  - Filtrage dynamique avec animations
+  - Support de la traduction FR/EN
+  - Responsive mobile avec wrap
 
 ### 3 novembre 2025
 ```
